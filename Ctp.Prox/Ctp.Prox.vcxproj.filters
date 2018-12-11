@@ -24,20 +24,23 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="cpth\ThostFtdcMdApi.h">
-      <Filter>头文件\ctph</Filter>
-    </ClInclude>
-    <ClInclude Include="cpth\ThostFtdcTraderApi.h">
-      <Filter>头文件\ctph</Filter>
-    </ClInclude>
-    <ClInclude Include="cpth\ThostFtdcUserApiDataType.h">
-      <Filter>头文件\ctph</Filter>
-    </ClInclude>
-    <ClInclude Include="cpth\ThostFtdcUserApiStruct.h">
-      <Filter>头文件\ctph</Filter>
-    </ClInclude>
     <ClInclude Include="datatype.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CTraderHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ctph\ThostFtdcMdApi.h">
+      <Filter>头文件\ctph</Filter>
+    </ClInclude>
+    <ClInclude Include="ctph\ThostFtdcTraderApi.h">
+      <Filter>头文件\ctph</Filter>
+    </ClInclude>
+    <ClInclude Include="ctph\ThostFtdcUserApiDataType.h">
+      <Filter>头文件\ctph</Filter>
+    </ClInclude>
+    <ClInclude Include="ctph\ThostFtdcUserApiStruct.h">
+      <Filter>头文件\ctph</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -47,5 +50,16 @@
     <ClCompile Include="Ctp.Prox.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CTraderHandler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ctph\thostmduserapi.lib">
+      <Filter>头文件\ctph</Filter>
+    </Library>
+    <Library Include="ctph\thosttraderapi.lib">
+      <Filter>头文件\ctph</Filter>
+    </Library>
   </ItemGroup>
 </Project>
