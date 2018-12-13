@@ -3,7 +3,7 @@
 #include "logger.h"
 void  CTraderHandler::OnFrontConnected()
 {
-	LogOK("Connect Success", 30);
+	LogOK("Connect Success");
 	//¿ªÊ¼µÇÂ½
 	CThostFtdcReqUserLoginField reqUserLogin = { 0 };
 	strcpy_s(reqUserLogin.BrokerID,"9999");
@@ -14,5 +14,5 @@ void  CTraderHandler::OnFrontConnected()
 
 void CTraderHandler::OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast)
 {
-	LogOK("Login Success", 30);
+	LogError("Login Success");
 }
