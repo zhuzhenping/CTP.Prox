@@ -5,6 +5,8 @@
 #pragma comment (lib, "ctph/thostmduserapi.lib")
 #pragma comment (lib, "ctph/thosttraderapi.lib")
 #include<iostream>
+
+int static  nRequestID=0;
 class CTraderHandler : public CThostFtdcTraderSpi
 {
 private:
@@ -20,12 +22,16 @@ public:
 		m_ptraderapi->RegisterFront(const_cast<char *>(adress.c_str()));
 		m_ptraderapi->Init();
 		//输出API版本信息
-		auto version= m_ptraderapi->GetApiVersion();
+		
+		
+
+		//LogOK(m_ptraderapi->GetApiVersion(),30);
+		
 	}
 
 
-	void OnFrontConnected()
-	{
+	void OnFrontConnected();
+	void OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast);
 
-	}
+
 };
