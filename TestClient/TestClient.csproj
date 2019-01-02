@@ -133,9 +133,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ctp.Core\Ctp.Core.vcxproj">
+      <Project>{2a0754c3-b172-4476-92df-4a57d445c8ae}</Project>
+      <Name>Ctp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)\CsharpClientPath\" /y</PostBuildEvent>
   </PropertyGroup>
 </Project>
