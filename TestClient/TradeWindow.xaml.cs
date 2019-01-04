@@ -16,12 +16,8 @@ using Ctp.Core;
 
 namespace TestClient
 {
-    public class Grid:UserControl
-    {
-
-    }
     /// <summary>
-    /// TradeWindow.xaml 的交互逻辑
+    /// 测试客户端，测试银证转账的话需要实盘账户，例子里提供的都是有误的信息
     /// </summary>
     public partial class TradeWindow : Window
     {
@@ -119,62 +115,11 @@ namespace TestClient
                       return;
                   }
                   Dictionary<String, String> dic = new Dictionary<string, string>()
-                {
+                  {
                       {"代码", e.QryOrderResData.InstrumentID },
                          {"报单编号", e.QryOrderResData.OrderSysID},
                       {"经纪公司代码", e.QryOrderResData.BrokerID},
                      {"报单引用", e.QryOrderResData.OrderRef},
-                //    {"报单价格条件", e.QryOrderResData.OrderPriceType},
-                //   {"买卖方向", e.QryOrderResData.Direction},
-                //  {"组合开平标志", e.QryOrderResData.CombOffsetFlag},
-                //  {"组合投机套保标志", e.QryOrderResData.CombHedgeFlag},
-                //  {"价格", e.QryOrderResData.LimitPrice},
-                //  {"数量", e.QryOrderResData.VolumeTotalOriginal},
-                //  {"有效期类型", e.QryOrderResData.TimeCondition},
-                //  {"GTD日期", e.QryOrderResData.GTDDate},
-                //   {"成交量类型", e.QryOrderResData.VolumeCondition},
-                //  {"最小成交量", e.QryOrderResData.MinVolume},
-                // {"触发条件", e.QryOrderResData.ContingentCondition},
-                // {"止损价", e.QryOrderResData.StopPrice},
-                // {"强平原因", e.QryOrderResData.ForceCloseReason},
-                //{"自动挂起标志", e.QryOrderResData.IsAutoSuspend},
-                //{"业务单元", e.QryOrderResData.BusinessUnit},
-                //{"请求编号", e.QryOrderResData.RequestID},
-                //{"本地报单编号", e.QryOrderResData.OrderLocalID},
-                // {"交易所代码", e.QryOrderResData.ExchangeID},
-                // {"会员代码", e.QryOrderResData.ParticipantID},
-                // {"客户代码", e.QryOrderResData.ClientID},
-                //  {"合约在交易所的代码", e.QryOrderResData.ExchangeInstID},
-                // {"交易所交易员代码", e.QryOrderResData.TraderID},
-                // {"安装编号", e.QryOrderResData.InstallID},
-                // {"报单提交状态", e.QryOrderResData.OrderSubmitStatus},
-                // {"报单提示序号", e.QryOrderResData.NotifySequence},
-                //{"交易日", e.QryOrderResData.TradingDay},
-                // {"结算编号", e.QryOrderResData.SettlementID},
-                // {"报单来源", e.QryOrderResData.OrderSource},
-                //{"报单状态", e.QryOrderResData.OrderStatus},
-                //{"报单类型", e.QryOrderResData.OrderType},
-                //{"今成交数量", e.QryOrderResData.VolumeTraded},
-                //{"剩余数量", e.QryOrderResData.VolumeTotal},
-                //  {"报单日期", e.QryOrderResData.InsertDate},
-                //  {"委托时间", e.QryOrderResData.InsertTime},
-                // {"激活时间", e.QryOrderResData.ActiveTime},
-                // {"挂起时间", e.QryOrderResData.SuspendTime},
-                //  {"最后修改时间", e.QryOrderResData.UpdateTime},
-                //{"撤销时间", e.QryOrderResData.CancelTime},
-                // {"最后修改交易所交易员代码", e.QryOrderResData.ActiveTraderID},
-                // {"结算会员编号", e.QryOrderResData.ClearingPartID},
-                //{"序号", e.QryOrderResData.SequenceNo},
-                //{"前置编号", e.QryOrderResData.FrontID},
-                //{"会话编号", e.QryOrderResData.SessionID},
-                //  {"用户端产品信息",  e.QryOrderResData.UserProductInfo},
-                //{"状态信息", e.QryOrderResData.StatusMsg},
-                //{"用户强评标志", e.QryOrderResData.UserForceClose},
-                //{"操作用户代码", e.QryOrderResData.ActiveUserID},
-                //{"经纪公司报单编号", e.QryOrderResData.BrokerOrderSeq},
-                //  {"相关报单", e.QryOrderResData.RelativeOrderSysID},
-                //  {"郑商所成交数量", e.QryOrderResData.ZCETotalTradedVolume},
-                //  {"互换单标志", e.QryOrderResData.IsSwapOrder},
                   {"营业部编号", e.QryOrderResData.BranchID},
                    {"投资单元代码", e.QryOrderResData.InvestUnitID},
                   {"资金账号",  e.QryOrderResData.AccountID},
@@ -267,23 +212,9 @@ namespace TestClient
                 }
                 Dictionary<String, String> dic = new Dictionary<string, string>()
                 {
-                      {   "代码", data.InstrumentID },
-                      //{   "上日持仓", data.YdPosition },
-                      //{   "持仓多空方向", str },
-                      //{   "持仓日期", data.PositionDate },
-                      //{   "今日持仓2", data.Position },
-                      //{   "持仓成本", data.PositionCost },
-                      //{   "冻结资金", data.FrozenCash },
-                      //{   "手续费", data.Commission },
-                      //{   "平仓盈亏", data.CloseProfit },
-                      //{   "交易日", data.TradingDay },
-                      //{   "结算编号", data.SettlementID },
-                      //{   "今日持仓", data.TodayPosition },
-                      //{   "开仓成本", data.OpenCost },
-                      //{   "上次结算价", data.PreSettlementPrice },
+                      {   "代码", data.InstrumentID }, 
                 };
                 chicangdic.Add(dic);
-                //System.Threading.Thread.Sleep(100);
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
                     chicanggrid.AutoGenerateColumns = false;
@@ -441,9 +372,9 @@ namespace TestClient
                     LastFragment = (sbyte)'0',///最后分片标志 '0'=是最后分片
                     IdCardType = (sbyte)'1',///证件类型
                     CustType = (sbyte)'0',///客户类型
-                    BankAccount = "6228480318330377173",
+                    BankAccount = "6228480318330377184",
                     AccountID = "8100915",///投资者帐号
-                    Password = "410245",///期货密码--资金密码
+                    Password = "123456",///期货密码--资金密码
                     BankPassWord = "975268",
                     InstallID = 1,///安装编号
                     FutureSerial = 0,///期货公司流水号
@@ -480,11 +411,11 @@ namespace TestClient
                     BrokerID = "7070",
                     LastFragment = (sbyte)'0',///最后分片标志 '0'=是最后分片
                     IdCardType = (sbyte)'1',///证件类型
-                    IdentifiedCardNo = "33020319970410245X",///证件号码
-                   //BankAccount = "6228480318330377173",///银行帐号
+                    IdentifiedCardNo = "33020319950410245X",///证件号码
+                   //BankAccount = "6228480318330377184",///银行帐号
                     BankPassWord = "975268",
                     AccountID = "8100915",///投资者帐号
-                    Password = "410245",///期货密码
+                    Password = "123456",///期货密码
                     InstallID = 1,///安装编号
                     CustType = (sbyte)'0',
                     VerifyCertNoFlag = (sbyte)'1', //验证客户证件号码标志
@@ -517,7 +448,7 @@ namespace TestClient
                     BrokerID = "7070",
                     AccountID = "8100915",
                     OldPassword = "410244",
-                    NewPassword = "410245",
+                    NewPassword = "123456",
                     CurrencyID = "CNY",
                 };
                 trader.ReqTradingAccountPasswordUpdate(req_parmas, UserManger.RequestId++);
@@ -542,8 +473,8 @@ namespace TestClient
                     BankPassWord = "975268",
                     AccountID = "8100915",
                     VerifyCertNoFlag = (sbyte)'1',
-                    IdentifiedCardNo = "33020319970410245X",
-                    BankAccount = "6228480318330377173",
+                    IdentifiedCardNo = "33020319950410245X",
+                    BankAccount = "6228480318330377184",
                 };
                 trader.ReqQueryBankAccountMoneyByFuture(req_parmas, UserManger.RequestId++);
             };
@@ -559,11 +490,5 @@ namespace TestClient
             };
             #endregion 测试
         }
-    }
-
-    public class Field
-    {
-        public string name;
-        public string value;
     }
 }

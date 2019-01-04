@@ -5,9 +5,8 @@
     <StartProgram>C:\Users\viruser.v-desktop\source\repos\Ctp\Ctp.BuildTarget\TestClient.exe</StartProgram>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <StartProgram>
-    </StartProgram>
-    <StartAction>Project</StartAction>
+    <StartProgram>C:\Users\viruser.v-desktop\source\repos\Ctp.Prox\CsharpClientPath\TestClient.exe</StartProgram>
+    <StartAction>Program</StartAction>
     <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
   </PropertyGroup>
 </Project>

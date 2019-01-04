@@ -44,7 +44,7 @@ namespace TestClient
                   var login_param = new UserLoginRequestData()
                   {
                       TradingDay = "20181214",
-                      BrokerID = "7070",
+                      BrokerID = "9999",
                       UserID = user,
                       Password = pwd,
                       UserProductInfo = "test",
@@ -98,9 +98,9 @@ namespace TestClient
                 }));
             };
 
-           // trader.RegisterFront("tcp://47.97.122.147:41205");
+            trader.RegisterFront("tcp://180.168.146.187:10001");  //测试simnow模拟交易
 
-            trader.RegisterFront("tcp://116.236.239.136:41205"); 
+           // trader.RegisterFront("tcp://116.236.239.136:41205"); //测试银期转账用的
             trader.SubscribePrivateTopic(SubscriptionMode.Quick);
             trader.SubscribePublicTopic(SubscriptionMode.Quick);
             trader.Init();
@@ -113,10 +113,6 @@ namespace TestClient
             {
                 quoter = new Quoter();
             }
-        }
-        private void btn_login_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
