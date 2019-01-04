@@ -1,0 +1,3 @@
+if can not open the exe application 
+maybe need some dll,like api-*.dll  and *.140.dll
+because the project CTP.Core is a C++/Cli project
