@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ctp.Prox", "Ctp.Prox\Ctp.Pr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ctp.Core", "Ctp.Core\Ctp.Core.vcxproj", "{2A0754C3-B172-4476-92DF-4A57D445C8AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{5BC369E9-69E0-4343-9F89-6E6F7D9A9798}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "doNetClient", "doNetClient\doNetClient.csproj", "{5BC369E9-69E0-4343-9F89-6E6F7D9A9798}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

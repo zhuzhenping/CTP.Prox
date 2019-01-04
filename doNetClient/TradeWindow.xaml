@@ -1,0 +1,98 @@
+﻿<Window x:Class="TestClient.TradeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestClient"
+        mc:Ignorable="d"
+        Title="" Height="450" Width="800">
+
+    <Grid>
+        <TabControl Name="MainTab" RenderTransformOrigin="0.172,0.417">
+            <TabItem Name="Tab1" Header="下单">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <RadioButton Content="买" Name="buybtn" Margin="100,146,641,170"/>
+                        <RadioButton Content="卖" Name="shellbtn" Margin="150,146,583,170"/>
+                        <RadioButton Content="开仓" Name="kaicangbtn"  Margin="100,184,626,128" />
+                        <RadioButton Content="平今" Name="pingjingbtn" Margin="174,184,552,128" />
+                        <RadioButton Content="平仓" Name="pingcangbtn" Margin="230,184,496,128" />
+                        <Label Content="代码" HorizontalAlignment="Left" Margin="94,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.858,0.295"/>
+                        <TextBox HorizontalAlignment="Left"  Name="codebtn"  Height="23" Margin="150,28,0,0" TextWrapping="Wrap" Text="ag1812" VerticalAlignment="Top" Width="120"/>
+                        <Label Content="价格"  HorizontalAlignment="Left" Margin="94,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.858,0.295"/>
+                        <TextBox HorizontalAlignment="Left" Text="3600" Name="pricebtn"  Height="23" Margin="150,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                        <Label Content="数量"  HorizontalAlignment="Left" Margin="94,96,0,0" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left"  Name="countbtn"  Height="23" Margin="150,99,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+                    </Grid>
+                    <Button Name="xiadanBtn" Content="下单" Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Tab2" Header="持仓">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Name="chicanggrid" Grid.Row="0" />
+                    <Button Name="chicangbtn" Content="查询" Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Tab3" Header="撤单">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Name="chedanGrid" Grid.Row="0" />
+                    <Button Name="chedanBtn" Content="撤单" Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Tab4" Header="资金">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Name="zijinGrid" Grid.Row="0" />
+                    <Button  Name="zijinQry" Content="查询" Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Tab5" Header="报单">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Name="qryGrid" Grid.Row="0" />
+                    <Button  Name="baodanQry" Content="查询" Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Tab6" Header="成交">
+                <Grid>
+                    <DataGrid Name="cjGrid"  />
+                </Grid>
+            </TabItem>
+            <TabItem Name="Tab7" Header="银证转账">
+                <Grid>
+                    <TextBox Name="text" Margin="108,42,494,312"/>
+                    <Button Content="转帐流水" Name="zhuanzhangliushuiBtn" Height="40" RenderTransformOrigin="-5.788,0.662" Margin="108,100,590,248"/>
+                    <Button Content="查询银期签约关系"  Name="yinqiqianyueBtn" Height="40" RenderTransformOrigin="-5.788,0.662" Margin="214,100,484,248"/>
+                    <Button Content="查询签约银行"  Name="qianyuebankBtn" Height="40" RenderTransformOrigin="-5.788,0.662" Margin="320,100,378,248"/>
+                    <Button Content="银行资金转期货请求"  Name="bankzijinzhuanqihuoBtn" Height="40" RenderTransformOrigin="-5.788,0.662" Margin="108,304,532,44"/>
+                    <Button Content="期货资金转银行请求" Name="qihuozijinzhuanbankBtn" Height="40" RenderTransformOrigin="-5.788,0.662" Margin="304,304,308,44"/>
+                    <Button Content="口令更新"  Height="40" Name="passwordBtn" RenderTransformOrigin="-5.788,0.662" Margin="534,304,164,44"/>
+                    <Button Content="查询银行余额"  Height="40" Name="chaxunyinghangyueBtn" RenderTransformOrigin="-5.788,0.662" Margin="440,100,258,248"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="Tab8" Header="测试2">
+                <Grid>
+                    <Button Content="修改密码" Name="csBtn" Height="40" RenderTransformOrigin="-5.788,0.662" Margin="56,0,642,0"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
